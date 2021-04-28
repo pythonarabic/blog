@@ -22,9 +22,12 @@ title: بايثون - Python Language
 email: pythonar38@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   مدونة تخص أول مجتمع عربي على تلغرام متخصص في لغة البايثون
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://pythonarabic.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  pythonarabic
+github:
+  source:
+    branch: main
 
 # Build settings
 theme: minima
