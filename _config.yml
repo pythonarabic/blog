@@ -28,6 +28,7 @@ github_username:  pythonarabic
 github:
   source:
     branch: main
+relative_url: "/blog"
 
 # Build settings
 theme: minima
