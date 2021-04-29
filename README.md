@@ -83,4 +83,14 @@ author: "Essa Alshammari"
 
    - صنف الموضوع مكان categories
 
+
+   ### خامسا \ نقوم بطلب دمج للمدونة كالتالي:
+
+   ![pull request](/images/pull-request.png)
+
+   ثم
+
+   ![pull request submit](/images/pull-request-submit.png)
+
+
 </div>
