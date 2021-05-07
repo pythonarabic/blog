@@ -3,7 +3,7 @@
 
 AUTHOR = 'Essa Alshammari'
 SITENAME = 'بايثون - Python Language'
-SITEURL = ''
+SITEURL = 'https://pythonarabic.github.io/blog'
 
 PATH = 'content'
 
