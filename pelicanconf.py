@@ -56,4 +56,6 @@ SOCIAL = (
 
 DISQUS_SITENAME = "pythonarabic-github-io-blog"
 
+ARTICLE_URL = 'posts/{date:%Y}/{slug}.html'
+
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{slug}.html'
