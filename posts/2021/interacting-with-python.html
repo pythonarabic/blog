@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://pythonarabic.github.io/blog/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/solid.css">
+
+
+
+
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/83315320?v=4" type="image/x-icon">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/83315320?v=4" type="image/x-icon">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64WTXBCXN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W64WTXBCXN');
+  </script>
+
+
+<meta name="author" content="Essa Alshammari" />
+<meta name="description" content="كتابة الشيفرة وتنفيذها بطرقها المختلفة" />
+<meta name="keywords" content="بايثون 101">
+
+
+<meta property="og:site_name" content="بايثون - Python Language"/>
+<meta property="og:title" content="التفاعل مع بايثون"/>
+<meta property="og:description" content="كتابة الشيفرة وتنفيذها بطرقها المختلفة"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://pythonarabic.github.io/blog/posts/2021/interacting-with-python.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-05-09 21:48:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://pythonarabic.github.io/blog/author/essa-alshammari.html">
+<meta property="article:section" content="سلسلة مبادئ البايثون"/>
+<meta property="article:tag" content="بايثون 101"/>
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/83315320?v=4">
+
+  <title>بايثون - Python Language &ndash; التفاعل مع بايثون</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://pythonarabic.github.io/blog">
+        <img src="https://avatars.githubusercontent.com/u/83315320?v=4" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="https://pythonarabic.github.io/blog"></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog" >الرئيسية</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/categories.html" >الاقسام</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/tags.html" >الوسوم</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/authors.html" >الكُتاب</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/pythonarabic" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-telegram" href="https://t.me/arabipython" target="_blank">
+              <i class="fab fa-telegram"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main dir="rtl">
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="interacting-with-python">التفاعل مع بايثون</h1>
+    <p>
+       نشر في يوم ح 09 مايو 2021 في قسم \ اقسام <a href="https://pythonarabic.github.io/blog/category/slsl-mbdy-lbythwn.html">سلسلة مبادئ البايثون</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>حتى هذه اللحظة اذا كنت قد اتبعت الدرس السابق يجب ان تكون البايثون مثبتة بالشكل الصحيح على حاسوبك.</p>
+<p>في هذا الدرس سنتعرف على كيفية التفاعل مع البايثون, ونقصد بالتفاعل اي كتابة الشيفرات وتنفيذها.</p>
+<p>هناك طرق عديدة.
+هنا سنتحدث عن ثلاث منها :</p>
+<ul>
+<li>استخدام البايثون بشكل تفاعلي  من خلال كتابة الشيفرة بشكل مباشر داخل المفسر.</li>
+<li>تنفيذ الشيفرة والتي تكون داخل ملف نصي من خلال سطر الاوامر.</li>
+<li>كتابة وتنفيذ البايثون من خلال بيئة تطوير متكاملة.</li>
+</ul>
+<p>سوف نستخدم المثال الاشهر عند بدء تعلم اي لغة برمجية وهي طباعة النص مرحبا بالعالم!
+Hello, World!</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>في هذة المرحلة لا يهم ما يتم تنفيذة بقدر فهم كيفية التعامل مع اللغة.</p>
+<p>لنبدأ..</p>
+<h2>استخدام مفسر البايثون بشكل مباشر</h2>
+<p>تعتبر هذة اسهل واسرع طريقة لكتابة التعليمات البرمجية.</p>
+<p>هناك ما يسمى ببيئة الريبل REPL
+والتي تسمح لنا بفتحها وكتابة الشيفرات بكل بساطة داخلها </p>
+<p>وكلمة REPL هي اختصار لــ</p>
+<ul>
+<li><strong>R</strong>ead</li>
+<li><strong>E</strong>valuate</li>
+<li><strong>P</strong>rint</li>
+<li><strong>L</strong>oop</li>
+</ul>
+<p>بما معناه:</p>
+<ul>
+<li>قراءة التعليمات التي تدخلها</li>
+<li>تقييم وتنفيذ التعليمات</li>
+<li>طباعة المخرجات اذا كان هناك اي منها</li>
+<li>الرجوع لاول خطوة والانتظار للمزيد</li>
+</ul>
+<p>في الويندوز نقوم بفتح cmd او powershell.</p>
+<p>وفي الماك واللينكس نقوم بفتح terminal.</p>
+<p>بعد ذالك نقوم بكابة هذا الامر</p>
+<p>python او python3</p>
+<div class="highlight"><pre><span></span><code>#<span class="nv">Windows</span>
+<span class="nv">C</span>:\<span class="nv">Users</span>\<span class="nv">essa</span><span class="o">&gt;</span><span class="nv">python</span>
+<span class="nv">Python</span> <span class="mi">3</span>.<span class="mi">6</span>.<span class="mi">0</span> <span class="ss">(</span><span class="nv">v3</span>.<span class="mi">6</span>.<span class="mi">0</span>:<span class="mi">41</span><span class="nv">df79263a11</span>, <span class="nv">Dec</span> <span class="mi">23</span> <span class="mi">2016</span>, <span class="mi">07</span>:<span class="mi">18</span>:<span class="mi">10</span><span class="ss">)</span> [<span class="nv">MSC</span> <span class="nv">v</span>.<span class="mi">1900</span> <span class="mi">32</span> <span class="nv">bit</span> <span class="ss">(</span><span class="nv">Intel</span><span class="ss">)</span>] <span class="nv">on</span> <span class="nv">win32</span>
+<span class="nv">Type</span> <span class="s2">&quot;</span><span class="s">help</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">copyright</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">credits</span><span class="s2">&quot;</span> <span class="nv">or</span> <span class="s2">&quot;</span><span class="s">license</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="nv">more</span> <span class="nv">information</span>.
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
+<p>الماك واللينكس</p>
+<div class="highlight"><pre><span></span><code>#<span class="nv">Mac</span> <span class="nv">and</span> <span class="nv">Linux</span>
+$ <span class="nv">python3</span>                                                                    
+<span class="nv">Python</span> <span class="mi">3</span>.<span class="mi">8</span>.<span class="mi">5</span> <span class="ss">(</span><span class="nv">default</span>, <span class="nv">Jan</span> <span class="mi">27</span> <span class="mi">2021</span>, <span class="mi">15</span>:<span class="mi">41</span>:<span class="mi">15</span><span class="ss">)</span> 
+[<span class="nv">GCC</span> <span class="mi">9</span>.<span class="mi">3</span>.<span class="mi">0</span>] <span class="nv">on</span> <span class="nv">linux</span>
+<span class="nv">Type</span> <span class="s2">&quot;</span><span class="s">help</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">copyright</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">credits</span><span class="s2">&quot;</span> <span class="nv">or</span> <span class="s2">&quot;</span><span class="s">license</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="nv">more</span> <span class="nv">information</span>.
+<span class="o">&gt;&gt;&gt;</span> 
+</code></pre></div>
+
+<p>بعد ان تم التشغيل نقوم بكتابة الامر المذكور سابقا بعد علامة &lt;&lt;&lt; ومن ثم نضغط على انتر Enter</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="err">!</span>
+</code></pre></div>
+</td></tr></table>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;مرحبا بالعالم!&quot;</span><span class="p">)</span>
+<span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="err">!</span>
+</code></pre></div>
+</td></tr></table>
+<p>وبهذا نكون تعلمنا كيفية تشغيل البايثون تفاعليا وبشكل مباشر.</p>
+<p>للخروج من الريبل قم بطباعة الامر </p>
+<div class="highlight"><pre><span></span><code><span class="k">exit</span><span class="ss">()</span>
+</code></pre></div>
+
+<h2>تشغيل البايثون من  خلال كتابة الشيفرات داخل الملفات النصوصية</h2>
+<p>كتابة الاوامر والشيفرات بالطريقة السابقة ربما يكون اسرع  وابسط الا انه عندما تريد كتابة شيفرة طويلة فتلك الطريقة لا تنفع.</p>
+<p>لانه غالبا نحتاج لحفظ الملف ومشاركتة والتعديل عليه.</p>
+<p>هنا تأتي الطريقة الثانية وهي افضل وتكمن في كتابة الشيفرة داخل ملف نصي كاي ملف اخر عادي.</p>
+<p>نقوم بفتح اي محرر للنصوص ومن ثم نقوم بالكتابة داخل وعند الانتهاء نحفظ بأي اسم نرغب ولكن نتأكد من انه ينتهي باللاحقة py هكذا</p>
+<div class="highlight"><pre><span></span><code>program.py
+</code></pre></div>
+
+<p>نقوم بكتابة الامر السابق داخل الملف ونحفظه</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>بعد ذلك من داخل سطر الاوامر لاي من الانظمة نتأكد اننا في نفس مسار الملف المحفوظ.</p>
+<p>ومن ثم نكتب الامر التالي </p>
+<p>للويندوز</p>
+<div class="highlight"><pre><span></span><code>C:\Users\essa&gt;python program.py
+</code></pre></div>
+
+<p>للماك واللينكس</p>
+<div class="highlight"><pre><span></span><code>$ python3  program.py
+</code></pre></div>
+
+<p>الامر السابق سوف يطبع لنا المخرج</p>
+<div class="highlight"><pre><span></span><code>Hello, World!
+</code></pre></div>
+
+<p>بهذا نكون تعلمنا للطريقة الثانية.</p>
+<h2>التفاعل مع البايثون من خلال بيئة تطوير</h2>
+<p>باختصار بيئة التطوير تكون ذات فائدة اكبر لان في بعضها احياننا تجمع لنا ما بين الطريقتين السابقتين الريبل والمحرر في نفس الوقت.</p>
+<p>والافضل من ذلك ان لها خصائص لا تجدها في الطريقتين السابقتين مثل</p>
+<ul>
+<li><strong>Syntax highlighting</strong> وهي ظهور الشيفرة بالوان مختلفة حتى تمكنك من التمييز بين بعض الاشياء المهمة في اللغة.</li>
+<li><strong>Code-completion</strong> اكمال الشيفرة عند كتابة اول احرفها وهذا يزيد من السرعة والانتاجية</li>
+<li><strong>Debugging</strong> وهذه الخاصية تمكنك من تصحيح الاخطاء خطوة بخطوة.</li>
+</ul>
+<p>وغيرها الكثييير من الخصائص...</p>
+<p>هناك العديد من هذه البيئات التي يمكنك استخدامها.</p>
+<p>وابسطها البيئة الافتراضية للبايثون والتي تأتي مع البايثون عند التركيب واسمها IDLE.</p>
+<p>بأمكانك الاطلاع عليها ضمن قائمة برامجك عن طريق البحث عنها</p>
+<p>وهناك البيئات المشهورة بين مطورين البايثون منها:</p>
+<ul>
+<li>pycharm</li>
+<li>vs code</li>
+</ul>
+<p>سوف نتطرق لها لاحقاً بأذن الله لانه الان لا نحتاج اليها في مرحلة بدائيات اللغة.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://pythonarabic.github.io/blog/tag/bythwn-101.html">بايثون 101</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'pythonarabic-github-io-blog';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy; 2020 Essa Alshammari</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " بايثون - Python Language ",
+  "url" : "https://pythonarabic.github.io/blog",
+  "image": "https://avatars.githubusercontent.com/u/83315320?v=4",
+  "description": ""
+}
+</script>
+
+
+</body>
+</html>
