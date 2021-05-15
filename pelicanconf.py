@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
+import datetime
+
 AUTHOR = 'Essa Alshammari'
 SITENAME = 'بايثون - Python Language'
 SITEURL = 'https://pythonarabic.github.io/blog'
@@ -46,7 +48,7 @@ ARTICLE_ORDER_BY = 'reversed-date'
 PYGMENTS_STYLE = "github"
 
 COPYRIGHT_NAME = "Essa Alshammari"
-COPYRIGHT_YEAR = "2020"
+COPYRIGHT_YEAR = datetime.date.today().year
 
 FAVICON = "https://avatars.githubusercontent.com/u/83315320?v=4"
 
