@@ -2,7 +2,7 @@ Title: انواع البيانات في البايثون 4
 Date: 2021-05-16 00:40
 Category: سلسلة مبادئ البايثون
 Tags: بايثون 101
-Summary: نتعرف معاً على القيم المطقية في بايثون
+Summary: نتعرف معاً على القيم المنطقية في بايثون
 Author: Essa Alshammari
 Slug: python-datatype-4
 
