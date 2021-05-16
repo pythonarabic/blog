@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://pythonarabic.github.io/blog/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/solid.css">
+
+
+
+
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/83315320?v=4" type="image/x-icon">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/83315320?v=4" type="image/x-icon">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64WTXBCXN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W64WTXBCXN');
+  </script>
+
+
+<meta name="author" content="Essa Alshammari" />
+<meta name="description" content="المتغيرات في بايثون" />
+<meta name="keywords" content="بايثون 101">
+
+
+<meta property="og:site_name" content="بايثون - Python Language"/>
+<meta property="og:title" content="المتغيرات في بايثون"/>
+<meta property="og:description" content="المتغيرات في بايثون"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://pythonarabic.github.io/blog/posts/2021/variables.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-05-17 00:18:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://pythonarabic.github.io/blog/author/essa-alshammari.html">
+<meta property="article:section" content="سلسلة مبادئ البايثون"/>
+<meta property="article:tag" content="بايثون 101"/>
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/83315320?v=4">
+
+  <title>بايثون - Python Language &ndash; المتغيرات في بايثون</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://pythonarabic.github.io/blog">
+        <img src="https://avatars.githubusercontent.com/u/83315320?v=4" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="https://pythonarabic.github.io/blog"></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog" >الرئيسية</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/categories.html" >الاقسام</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/tags.html" >الوسوم</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/authors.html" >الكُتاب</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/pythonarabic" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-telegram" href="https://t.me/arabipython" target="_blank">
+              <i class="fab fa-telegram"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main dir="rtl">
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="variables">المتغيرات في بايثون</h1>
+    <p>
+       نشر في يوم ن 17 مايو 2021 في قسم \ اقسام <a href="https://pythonarabic.github.io/blog/category/slsl-mbdy-lbythwn.html">سلسلة مبادئ البايثون</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>المتغيرات في بايثون</h1>
+<p>في المواضيع السابقة عندما تعرفنا على انواع البيانات في بايثون كنا نكتبها بشكل حرفي او ثابت لا تتغير,
+وما اذا اردنا ان نتكتب شيفرة لفعل شي معين اي معقدة بشكل ما فهناك متتطلب لهذة البيانات ان تتغير مع تقدم تنفيذ الشيفرة.</p>
+<p>هنا يأتي دور المتغيرات, فتاليا سوف نتعرف على ماهيتها وكيف نعطي البيانات في البايثون وصفاً مجرداً, والذي من خلاله يمكننا ان نتلاعب بهذه البيانات .</p>
+<h3>اسناد القيم للمتغيرات</h3>
+<p>فكر بها كالتالي نعطي لاي نوع من انواع البيانات في البايثون اسماً.
+وفي البايثون يتم ذلك من خلال  علامة = كالتالي:</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Essa&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
+</code></pre></div>
+
+<p>هنا لدينا متغيرين الاول name والاخر age.</p>
+<p>وقد قمنا باسناد القيم لها "Essa" و 30.</p>
+<p>بالنسبة لمفسر البايثون فيقرأها كالتالي المتغير name له قيمة "Essa",  وعندما يستخدم المتغير name في اي مكان اخر مرة اخرى فسوف يستبدله بالقيمة "Essa" كالتالي:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="n">Essa</span>
+</code></pre></div>
+
+<p>وعند تغيير قيمة المتغير الى شي اخر سيتغير.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Hanan&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="n">Hanan</span>
+</code></pre></div>
+
+<p>ايضاً في البايثون نوع المتغير بأمكانة ان يتغير على خلاف العديد من اللغات الاخرى والتي يكون انشاء المتغير فيها يجب ان يصاحبة نوع البيانات الذي سيكون في القيمة ولا يتغير اطلاقاً.</p>
+<p>في البايثون يمكننا فعل التالي:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="s2">&quot;Essa&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+
+<p>هنا اسندنا قيمة من نوع نص الى المتغير n, وعند طباعة نوع البيانات الموجودة في المتغير قام المفسر بتأكيد ذلك.
+ وبعدها قمنا بتغيير قيمة نفس المتغير n الى بيانات من نوع عدد, وعند طباعة نوعه نجد انه فعلا تغير.</p>
+<h3>لندخل في العمق قليلاً</h3>
+<p>ما الذي يحدث عندما نسند قيمة الى متغير؟ الاجابة ستكون طويلة بعض الشئ.</p>
+<p>قلنا في السابق ان البايثون تدعم اكثر من توجة برمجي ولعل اللغة مبنية بشكل جيد في البرمجة كائنية التوجة, ولذلك فكل قيمة في البايثون تقريبا تعتبر كائن object ينتمي الى نوع class.</p>
+<blockquote>
+<p>عندما نقول كائن فنعني به object.</p>
+</blockquote>
+<p>لنأخذ المثال التالي:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="mi">1</span>
+</code></pre></div>
+
+<p>هنا يقوم المفسر بالخطوات التالية:</p>
+<ul>
+<li>يقوم بأنشاء كائن من نوع <code>integer</code>.</li>
+<li>يقوم بأعطاء الكائن قيمة 1.</li>
+<li>يقوم بعرضة.</li>
+</ul>
+<p>الان مع المتغير</p>
+<p>المتغير هو فقط عبارة عن اسم رمزي يؤشر على الكائن الذي يحمل بداخلة القيمة والتي نقوم باعطائها نحن للمتغير.</p>
+<p>وبمجرد ان نعطي قيمة ما لمتغيربامكاننا الرجوع للكائن نفسة عن طريق اسم المتغير, لكن البيانات او القيمة هي لا زالت في محتوى الكائن.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div>
+
+<p>هنا عملية الاسناد تقوم بأنشاء كائن من نوع القيمة <code>int</code> في هذه الحالة, وتعطية القيمة 1 ومن ثم  تعطي اسم المتغير <code>n</code> مؤشر من خلاله يمكن الرجوع الكائن.</p>
+<p>نتأكد من ذلك كالتالي:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+
+<p>هنا عملية التأكيد ان المتغير <code>n</code> يشير الى الكائن <code>int</code>.</p>
+<p>وبما ان المتغير يمكن ان نفعل به مثل ما نفعل بقيمتة! انظر للمثال التالي:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">n</span>
+</code></pre></div>
+
+<p>هنا اسندنا المتغير <code>n</code> الى متغير جديد <code>m</code>.</p>
+<p>هل سيقوم مفسر البايثون باعادة جميع الخطوات السابقة ؟ لا</p>
+<p>لن يقوم بأنشاء كائن جديد! فقط سيقوم بأنشاء مرجع او مؤشر بالاسم الجديد <code>m</code> ويقوم بالتأشير على الكائن الموجود مسبقا في <code>n</code>.</p>
+<p>كيف نتأكد من ذلك؟</p>
+<p>هناك فنكشن اسمه <code>id</code> مهمتة ان يقوم بأرجاع رقم المعرف المعطى للكائن عند عملية انشائة:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="mi">9784896</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="mi">9784896</span>
+</code></pre></div>
+
+<p>هنا يتضح ذلك جلياً ان كلا المتغيرين يشيران الى نفس الكائن.</p>
+<p>اذا ماذا لو قمنا بتغيير قيمة المتغير الجديد؟</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre></div>
+
+<p>هنا المفسر سيقوم بأنشاء كائن جديد ويعطية القيمة الجديدة ومن ثم يقوم بتغيير الموشر الى الكائن الجديد.</p>
+<p>الان ماذا لو قمنا بتغير قيمة احدى المتغيرات الى قيمة من نوع اخر؟</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="s2">&quot;Essa&quot;</span>
+</code></pre></div>
+
+<p>سيقوم المفسر بأنشاء كائن جديد من نوع القيمة المسندة الى المتغير ويقوم بتغيير الموشر الى الكائن الجديد.
+اما القيمة السابقة ستصبح الان دون مؤشر ولا يمكننا الرجوع اليها وستصبح يتيمة., وسيقوم البايثون بحذفها.</p>
+<h3>تسمية المتغيرات</h3>
+<p>هناك بعض الشروط لتسميتها</p>
+<p>يجب ان يبدأ الاسم اما بحرف او _ ويتبعه احرف صغيرةً كانت او كبيرة وارقام </p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Essa&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">_Age</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Loves_Python</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div>
+
+<p>كل ما سبق صحيح</p>
+<p>لكن التالي غير صحيح:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">1991</span><span class="n">_something</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="mi">1991</span><span class="n">_something</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">decimal</span> <span class="n">literal</span>
+</code></pre></div>
+
+<p>غير صحيح لانه بدأ برقم.</p>
+<p>ويجب الانتباه ايضا الى حاله الاحرف فـ <code>age</code> مختلف تماما عن <code>Age</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">Age</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">aGe</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">AGE</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a_g_e</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">_age</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">age_</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">_AGE_</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">Age</span><span class="p">,</span> <span class="n">aGe</span><span class="p">,</span> <span class="n">AGE</span><span class="p">,</span> <span class="n">a_g_e</span><span class="p">,</span> <span class="n">_age</span><span class="p">,</span> <span class="n">age_</span><span class="p">,</span> <span class="n">_AGE_</span><span class="p">)</span>
+<span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span>
+</code></pre></div>
+
+<p>لا يوجد شي يمنعنا من استخدام نفس الاسم لمتغيرين تختلف فيهما حالة الاحرف مثل <code>age</code> و <code>Age</code>, لكن ذلك سيخلق بعضاً من التشويش لنا. </p>
+<p>هناك ايضا بعض الاعراف المستخدمة بين المطورين عندما نأتي لتسمية المتغيرات وفي البايثون هناك ورقة توضح ذلك واسمها pep8.</p>
+<p>وببساطة يقول لنا اذا اردنا تسمية متغير يجب اتباع الاتي على مثلا هذا المتغير <code>Number of Friends</code></p>
+<p>طبعا البايثون لا يقبل المسافات في اسماء المتغيرات لذلك سنقوم بأستبدالها بـ _ .</p>
+<p>وحالة الاحرف يجب ان تكون صغيرة عندما نريد تسمية متغير </p>
+<p>اذا فسيكون كالتالي:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">number_of_friends</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div>
+
+<p>في اخر اصدارات البايثون هناك دعم للاحرف بترميز يونيكود عند استخدامها كأسماء متغيرات, وبذلك يمكننا أستخدام الاحرف العربية والايموجي كأسماء متغيرات</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">متغير</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">متغير</span>
+<span class="mi">1</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://pythonarabic.github.io/blog/tag/bythwn-101.html">بايثون 101</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'pythonarabic-github-io-blog';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy; 2021 Essa Alshammari</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " بايثون - Python Language ",
+  "url" : "https://pythonarabic.github.io/blog",
+  "image": "https://avatars.githubusercontent.com/u/83315320?v=4",
+  "description": ""
+}
+</script>
+
+
+</body>
+</html>
