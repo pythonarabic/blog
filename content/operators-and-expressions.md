@@ -2,9 +2,9 @@ Title: العوامل وتعابيرها 1
 Date: 2021-05-18 04:11
 Category: سلسلة مبادئ البايثون
 Tags: بايثون 101
-Summary: المتغيرات في بايثون
+Summary: العمليات الرياضية
 Author: Essa Alshammari
-Slug: operators-and-expressions
+Slug: operators-and-expressions-1
 
 # العوامل وتعابيرها 1
 
@@ -42,7 +42,7 @@ Slug: operators-and-expressions
  كل ما سبق هي عمليات ثنائية.
  
  وهناك عمليتان احادية تدعمها البايثون:
- 
+
  - `+x` ليس له فائدة على الاطلاق :).
  - `-x` يقوم بعكس الاشارة.
 
