@@ -45,7 +45,7 @@ SITELOGO = "https://avatars.githubusercontent.com/u/83315320?v=4"
 
 ARTICLE_ORDER_BY = 'reversed-date'
 
-PYGMENTS_STYLE = "github"
+PYGMENTS_STYLE = "tango"
 
 COPYRIGHT_NAME = "Essa Alshammari"
 COPYRIGHT_YEAR = datetime.date.today().year
@@ -57,7 +57,7 @@ SOCIAL = (
     ("telegram", "https://t.me/arabipython"),
 )
 
-DISQUS_SITENAME = "pythonarabic-github-io-blog"
+# DISQUS_SITENAME = "pythonarabic-github-io-blog"
 
 ARTICLE_URL = 'posts/{date:%Y}/{slug}.html'
 
