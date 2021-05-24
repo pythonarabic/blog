@@ -39,24 +39,24 @@
 
 
 <meta name="author" content="Essa Alshammari" />
-<meta name="description" content="نتعرف معاً على القيم المنطقية في بايثون" />
+<meta name="description" content="عمليات المقارنة" />
 <meta name="keywords" content="بايثون 101">
 
 
 <meta property="og:site_name" content="بايثون - Python Language"/>
-<meta property="og:title" content="انواع البيانات في البايثون 4"/>
-<meta property="og:description" content="نتعرف معاً على القيم المنطقية في بايثون"/>
+<meta property="og:title" content="العوامل وتعابيرها 2"/>
+<meta property="og:description" content="عمليات المقارنة"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://pythonarabic.github.io/blog/posts/2021/python-datatype-4.html"/>
+<meta property="og:url" content="https://pythonarabic.github.io/blog/posts/2021/operators-and-expressions-2.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2021-05-16 00:40:00+03:00"/>
+<meta property="article:published_time" content="2021-05-24 01:15:00+03:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://pythonarabic.github.io/blog/author/essa-alshammari.html">
 <meta property="article:section" content="سلسلة مبادئ البايثون"/>
 <meta property="article:tag" content="بايثون 101"/>
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/83315320?v=4">
 
-  <title>بايثون - Python Language &ndash; انواع البيانات في البايثون 4</title>
+  <title>بايثون - Python Language &ndash; العوامل وتعابيرها 2</title>
 
 </head>
 <body class="light-theme">
@@ -113,40 +113,43 @@
 <article class="single">
   <header>
       
-    <h1 id="python-datatype-4">انواع البيانات في البايثون 4</h1>
+    <h1 id="operators-and-expressions-2">العوامل وتعابيرها 2</h1>
     <p>
-       نشر في يوم Sun 16 May 2021 في قسم \ اقسام <a href="https://pythonarabic.github.io/blog/category/slsl-mbdy-lbythwn.html">سلسلة مبادئ البايثون</a>
+       نشر في يوم Mon 24 May 2021 في قسم \ اقسام <a href="https://pythonarabic.github.io/blog/category/slsl-mbdy-lbythwn.html">سلسلة مبادئ البايثون</a>
 
     </p>
   </header>
 
 
   <div>
-    <h2>انواع البيانات في البايثون 4</h2>
-<h3>القيم المنطقية Boolean</h3>
-<p>في البايثون القيم المنطقية هي احدى اثنتين True او False.</p>
-<p>لغوياً الاول يعبر عن الحقيقة او الصحة والاخر يعبر عن الخطأ.</p>
-<p>وتكتب في البايثون بهذا الشكل:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kc">True</span>
+    <h1>عمليات المقارنة</h1>
+<p>بكل بساطة هي العمليات التي تقارن بين عاملين والنتيجة تكون من نوع بوليان اما <code>True</code> او <code>False</code>.</p>
+<h3>عوامل المقارنة</h3>
+<p>سنذكرها باستخدام هذا السيناريو</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">8</span>
+</code></pre></div>
+
+<ul>
+<li><code>==</code> التساوي، يقوم بارجاع <code>True</code> اذا كان <code>x</code> يساوي <code>y</code>، ويرجع <code>False</code> اذا كان غير ذلك.</li>
+<li><code>=!</code> عدم التساوي، يقوم بارجاع <code>True</code> اذا كان <code>x</code> لا يساوي <code>y</code> ويرجع <code>False</code> اذا كان غير ذلك.</li>
+<li><code>&gt;</code> اصغر من، يقوم بارجاع <code>True</code> اذا كان <code>x</code> اصغر من <code>y</code> ويرجع <code>False</code> اذا كان غير ذلك.</li>
+<li><code>=&gt;</code> اصغر من او يساوي، يقوم بارجاع <code>True</code> اذا كان <code>x</code>  اصغر من او يساوي <code>y</code> ويرجع <code>False</code> اذا كان غير ذلك.</li>
+<li><code>&lt;</code> اكبر من، يقوم بارجاع <code>True</code> اذا كان <code>x</code> اكبر من <code>y</code> ويرجع <code>False</code> اذا كان غير ذلك.</li>
+<li><code>=&lt;</code> اكبر من او يساوي، يقوم بارجاع <code>True</code> اذا كان <code>x</code>  اكبر من او يساوي <code>y</code> ويرجع <code>False</code> اذا كان غير ذلك.</li>
+</ul>
+<p>الامثلة:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">y</span>
 <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span>
 <span class="kc">False</span>
 </code></pre></div>
-</td></tr></table>
-<blockquote>
-<p>يرجى مراعاة حالة الحرف الاول لكل منهما, يجب ان يكتب كبيراً</p>
-</blockquote>
-<p>وعندما نطلب من المفسر تقييم نوعيتهما سيضهر التالي:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bool</span><span class="s1">&#39;&gt;</span>
-</code></pre></div>
-</td></tr></table>
-<p>bool هو الاسم المعطى من البايثون لهذا النوع من البيانات</p>
-<p>في قادم الدروس سترى انه عندما نريد تقييم تعبير معين وعلى اساسة نفعل شيئا معيناً نستخدم غالبا القيم المنطقية حتى نتفرع في تنفيذ شيفرتنا.</p>
+
+<p>عمليات المقارنة تستخدم غالبا في الجمل الشرطية وجمل التكرار لنتحكم بطريقة واتجاه تنفيذ شيفرتنا كما سنتعرف عليها لاحقا.</p>
   </div>
   <div class="tag-cloud">
     <p>
