@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://pythonarabic.github.io/blog/theme/pygments/tango.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/solid.css">
+
+
+
+
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/83315320?v=4" type="image/x-icon">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/83315320?v=4" type="image/x-icon">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64WTXBCXN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W64WTXBCXN');
+  </script>
+
+
+<meta name="author" content="Essa Alshammari" />
+<meta name="description" content="العمليات المنطقية" />
+<meta name="keywords" content="بايثون 101">
+
+
+<meta property="og:site_name" content="بايثون - Python Language"/>
+<meta property="og:title" content="العوامل وتعابيرها 3"/>
+<meta property="og:description" content="العمليات المنطقية"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://pythonarabic.github.io/blog/posts/2021/operators-and-expressions-3.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-05-25 12:37:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://pythonarabic.github.io/blog/author/essa-alshammari.html">
+<meta property="article:section" content="سلسلة مبادئ البايثون"/>
+<meta property="article:tag" content="بايثون 101"/>
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/83315320?v=4">
+
+  <title>بايثون - Python Language &ndash; العوامل وتعابيرها 3</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://pythonarabic.github.io/blog">
+        <img src="https://avatars.githubusercontent.com/u/83315320?v=4" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="https://pythonarabic.github.io/blog"></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog" >الرئيسية</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/categories.html" >الاقسام</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/tags.html" >الوسوم</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/authors.html" >الكُتاب</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/pythonarabic" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-telegram" href="https://t.me/arabipython" target="_blank">
+              <i class="fab fa-telegram"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main dir="rtl">
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="operators-and-expressions-3">العوامل وتعابيرها 3</h1>
+    <p>
+       نشر في يوم Tue 25 May 2021 في قسم \ اقسام <a href="https://pythonarabic.github.io/blog/category/slsl-mbdy-lbythwn.html">سلسلة مبادئ البايثون</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>العمليات المنطقية</h1>
+<p>العمليات المنطقية في بايثون ثلاثة:</p>
+<ul>
+<li><code>not</code></li>
+<li><code>or</code></li>
+<li><code>and</code></li>
+</ul>
+<p>في المواضيع السابقة ذكرنا ان التعابير التي تكون فيها عمليات تكون في نوعين:</p>
+<ol>
+<li>ثنائي: يكون العامل محاطا من الجهتين بمعاملات. مثال <code>1 + 2</code>, الرقمان معاملات  وعلامة الجمع العامل.</li>
+<li>احادي: يكون العامل على يسار المعامل. مثال <code>1-</code>.</li>
+</ol>
+<p>ايضا هنا العمليات المنطقية فيها من النوعين السابقين</p>
+<ul>
+<li><code>not</code> احادية</li>
+<li><code>or, and</code> ثنائيات</li>
+</ul>
+<p>الفرق في العمليات المنطقية العامل يكون احدى الثلاث التي ذكرناها مسبقا not, or, and.
+والمعاملات بأمكانها ان تكون تعابير كاملة, ويجب ان تقوم التعابير بارجاع من نوع بوليان <code>True</code> او <code>False</code>.</p>
+<p>مثلا:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">3</span>
+<span class="kc">True</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">2</span>
+</code></pre></div>
+
+<p>هذا تعبير مثله مثل:</p>
+<div class="highlight"><pre><span></span><code><span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">3</span>
+</code></pre></div>
+
+<p>والعامل:</p>
+<div class="highlight"><pre><span></span><code><span class="ow">and</span>
+</code></pre></div>
+
+<p>الان بعد وضوح الفكرة لنشرح كل واحد منها على حده</p>
+<h3>المعامل and</h3>
+<p>يقوم بارجاع <code>True</code> اذا كان طرفي التعبير كلها <code>True</code>, ويرجع <code>False</code> اذا كان غير ذلك.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">y</span>
+<span class="kc">True</span>
+</code></pre></div>
+
+<p>مثال اخر:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">!=</span> <span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">2</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">y</span> 
+<span class="kc">False</span>
+</code></pre></div>
+
+<p>الواحد لايساوي الاثنان اذا ستكون قيمة المتغير  x = True.</p>
+<p>الواحد ليس اكبر او يساوي الاثنان اذا ستكون قيمة المتغير y = False.</p>
+<h3>المعامل or</h3>
+<p>يقوم بارجاع <code>True</code> اذا كان احدى طرفي التعابير <code>True</code>, ويرجع <code>False</code> اذا كان غير ذلك.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="ow">or</span> <span class="n">y</span>
+<span class="kc">True</span>
+</code></pre></div>
+
+<p>مثال اخر:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="ow">or</span> <span class="n">y</span>
+<span class="kc">True</span>
+</code></pre></div>
+
+<blockquote>
+<p>في العاملين and, or بامكاننا ان نضيف اكثر من معاملين.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="ow">or</span> <span class="n">y</span> <span class="ow">or</span> <span class="n">z</span>
+<span class="kc">True</span>
+</code></pre></div>
+
+<h3>المعامل not</h3>
+<p>يقوم بأرجاع <code>True</code> اذا كان قيمة المعامل <code>False</code> والعكس صحيح.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="n">x</span>
+<span class="kc">False</span>
+</code></pre></div>
+
+<p>مثال اخر :</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="n">y</span>
+<span class="kc">True</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://pythonarabic.github.io/blog/tag/bythwn-101.html">بايثون 101</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy; 2021 Essa Alshammari</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " بايثون - Python Language ",
+  "url" : "https://pythonarabic.github.io/blog",
+  "image": "https://avatars.githubusercontent.com/u/83315320?v=4",
+  "description": ""
+}
+</script>
+
+
+</body>
+</html>
