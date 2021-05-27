@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://pythonarabic.github.io/blog/theme/pygments/tango.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/solid.css">
+
+
+
+
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/83315320?v=4" type="image/x-icon">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/83315320?v=4" type="image/x-icon">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64WTXBCXN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W64WTXBCXN');
+  </script>
+
+
+<meta name="author" content="Essa Alshammari" />
+<meta name="description" content="العمليات على مستوى البت" />
+<meta name="keywords" content="بايثون 101">
+
+
+<meta property="og:site_name" content="بايثون - Python Language"/>
+<meta property="og:title" content="العوامل وتعابيرها 4"/>
+<meta property="og:description" content="العمليات على مستوى البت"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://pythonarabic.github.io/blog/posts/2021/operators-and-expressions-4.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-05-27 09:50:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://pythonarabic.github.io/blog/author/essa-alshammari.html">
+<meta property="article:section" content="سلسلة مبادئ البايثون"/>
+<meta property="article:tag" content="بايثون 101"/>
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/83315320?v=4">
+
+  <title>بايثون - Python Language &ndash; العوامل وتعابيرها 4</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://pythonarabic.github.io/blog">
+        <img src="https://avatars.githubusercontent.com/u/83315320?v=4" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="https://pythonarabic.github.io/blog"></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog" >الرئيسية</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/categories.html" >الاقسام</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/tags.html" >الوسوم</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/authors.html" >الكُتاب</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/pythonarabic" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-telegram" href="https://t.me/arabipython" target="_blank">
+              <i class="fab fa-telegram"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main dir="rtl">
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="operators-and-expressions-4">العوامل وتعابيرها 4</h1>
+    <p>
+       نشر في يوم Thu 27 May 2021 في قسم \ اقسام <a href="https://pythonarabic.github.io/blog/category/slsl-mbdy-lbythwn.html">سلسلة مبادئ البايثون</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>العمليات على مستوى البت bitwise</h1>
+<p>كما في المواضيع السابقة هي عدة عوامل نستخدمها لغرض معين, لكن هنا الفرق في انه ستكون المعاملات التي تحيط العامل كسلسلة من الارقام الثنائية وسيكون التعامل معها بت ببت.</p>
+<p>ربما في هذا الموضوع نحتاج الى ان نراجع بعض الاشياء </p>
+<p>البت بأختصار هو رقم ثنائي اما 0 او 1, وهو اصغر وحدة بيانات في الحوسبة.</p>
+<p>ماهي الارقام الثنائية ؟</p>
+<p>هو نظام عد يكون فيه الاساس 2 ويرمز له عادةً بـ 0 او 1 او صح او خطأ.</p>
+<p>حتى نفهم ما العد الثنائي يجب ان نقربة للفهم بأستخدام نظام العد العشري التي نستخدمها نحن كبشر.</p>
+<p>وهي الارقام التي يكون فيه الاساس 10 والرموز هي الارقام من 0 الى 9.</p>
+<p>لنأخذ هذا الرقم كمثال وكيف تم تمثيلة بشكلة التالي:</p>
+<p>38</p>
+<p>هذا الرقم في نظام العد العشري رُمز له بأستخدام المعادلة التالية</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">8</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">**</span> <span class="mi">1</span>
+<span class="mi">38</span>
+</code></pre></div>
+
+<p>اولا قمنا بأخذ الارقام من الجهة المعاكسة اي من اصغر منزلة للرقم ,ثم نقوم بضربة برقم 10 لانها الاساس ومن ثم نرفعها لاس المنزلة اي عدد الاصفار في المنزلة, وبعد ذلك نقوم بجمعة مع الرقم التالي مع تكرار الخطوات السابقة.</p>
+<blockquote>
+<p>للتذكير: المنازل هي الاحاد, العشرات, المئات, الالاف..... الخ.</p>
+</blockquote>
+<p>وبذلك عرض لنا نفس الرقم</p>
+<p>الان لنقوم بذلك في الارقام الثنائية حتى يتسنى فهمها</p>
+<p>لنأخذ الرقم 100110 على سبيل المثال.</p>
+<p>نفعل مثل ما فعلنا به مع الرقم السابق بأختلاف الاساس ونحولة الى 2</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">0</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">0</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">5</span>
+<span class="mi">38</span>
+</code></pre></div>
+
+<p>لماذا اذن ثنائية بدلا من الاعداد ذات الاساس العشري الذي نعرفة جيدا ؟</p>
+<p>فقط لانها اسهل للتعامل في الحوسبة من حيث البوابات المنطقية والدوائر الكهربائية وما الى ذلك من المستويات الدنياً</p>
+<p>لذلك تجد موضوع التعامل مع العمليات على مستوى البت قليلة الاستخدام لاننا لا نحتاج لها فكل الحواسب الان تقدم لنا طبقات مجردة مبنية عليها.</p>
+<p>ربما تحتاجها في يوم من الايام ! في كتابتها او حتى قراءة شيفرة برنامج اخر !</p>
+<p>لذلك كتبنا هذا الموضوع.</p>
+<blockquote>
+<p>ستجد ان بعض العمليات التي سنشرحها تاليا لا تمس للمنطق بصلة, ذلك لان عقولنا لم تتعود على مثل هذة العمليات.</p>
+</blockquote>
+<p>هناك في البايثون 6 عاملات للعمليات على مستوى البت.</p>
+<ul>
+<li><code>&amp;</code></li>
+<li><code>|</code></li>
+<li><code>~</code> </li>
+<li><code>^</code></li>
+<li><code>&lt;&lt;</code></li>
+<li><code>&gt;&gt;</code></li>
+</ul>
+<h3>العامل &amp; and</h3>
+<p>يقوم هذ العامل عندما يكون بين معاملين بأدراج 1 في الناتج المرجع اذا كان في نفس المكان من المعاملين رقم 1.</p>
+<p>مثال:</p>
+<blockquote>
+<p>لو تذكرون في المواضيع السابقة قلنا انه في البايثون الرقم الثنائي يجب ان يكون مسبوقا بـ <code>0b</code></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mb">0b100110</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mb">0b011011</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>
+<span class="mi">2</span>
+</code></pre></div>
+
+<p>:) كيف اصبح اثنان! ولماذا؟</p>
+<ul>
+<li>الـ <code>x</code> قيمته بالاعداد التي نعرفها هي 38</li>
+<li>الـ <code>y</code> قيمته 27</li>
+<li>والناتج 2</li>
+</ul>
+<p>ما الذي حدث</p>
+<p>الناتج في الواقع هو </p>
+<p><code>0b000010</code></p>
+<p>لنبسطها بالجدول التالي حتى لا نضطر لاعادة الكتابة مع المعاملات الاخرى</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>قيمة x</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>قيمة y</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>النتيجة</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>العامل &amp; يقوم باعطاء 1 في النتيجة اذا كان في كلا المعاملين 1</p>
+<h3>العامل | or</h3>
+<p>يقوم بأرجاع 1 اذا كان في نفس المكان 1 في اي الطرفين و0 اذا كان كلا المعاملين يحملان صفر في نفس المكان</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mb">0b100110</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mb">0b011011</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="n">x</span> <span class="o">|</span> <span class="n">y</span><span class="p">)</span>
+<span class="s1">&#39;0b111111&#39;</span>
+</code></pre></div>
+
+<blockquote>
+<p>هنا استخدمنا الفنكشن <code>bin</code> حتى نخبر البايثون بأن يرجع الرقم كثنائي.</p>
+</blockquote>
+<h3>العامل ~ not</h3>
+<p>اولا هذا العامل احادي لا يحتاج لمعاملين هكذا:</p>
+<div class="highlight"><pre><span></span><code><span class="o">~</span><span class="n">x</span>
+</code></pre></div>
+
+<p>ثانيا بالاصل هذا العامل يقوم بقلب 1 الى 0 والعكس صحيح لكن لان البايثون تتعامل بطريقة معينة مع الارقام فهو يختلف.</p>
+<p>في البايثون يقوم هذا العامل بقلب اشارة الرقم ويقوم بأضافة واحد اليه.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mb">0b100110</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="o">~</span><span class="n">x</span>
+<span class="o">-</span><span class="mi">39</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="o">~</span><span class="n">x</span><span class="p">)</span>
+<span class="s1">&#39;-0b100111&#39;</span>
+</code></pre></div>
+
+<h3>العامل ^ xor</h3>
+<p>يقوم هذا العامل بأرجاع 1 اذا كان اي من الطرفين يحمل واحد في نفس المكان لكن ليس كلاهما </p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mb">0b100110</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mb">0b011011</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">^</span> <span class="n">y</span>
+<span class="mi">61</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="n">x</span> <span class="o">^</span> <span class="n">y</span><span class="p">)</span>
+<span class="s1">&#39;0b111101&#39;</span>
+</code></pre></div>
+
+<h3>العاملان &gt;&gt; و &lt;&lt; shift</h3>
+<p>هذا العاملان احاديات</p>
+<p>يقوم بتحويل البت الى اليمين عند استخدام العامل &lt;&lt; بمقدار معين والاخر يقوم بذلك على اليسار.</p>
+<p>بشكل اوضح من اليمين يعني ان يأخذ البت الاخير ويحذفه</p>
+<p>ومن اليسار يعني اضافة 0 الى نهاية الرقم</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mb">0b100110</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span>
+<span class="mi">19</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="s1">&#39;0b10011&#39;</span>
+</code></pre></div>
+
+<blockquote>
+<p>رقم 1 الذي بعد &lt;&lt; هو المقدار</p>
+</blockquote>
+<p>مثال على العامل الاخر:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mb">0b100110</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span>
+<span class="mi">76</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">)</span>
+<span class="s1">&#39;0b1001100&#39;</span>
+</code></pre></div>
+
+<p>ختاماً غالبا عندما نتعامل مع لغات عالية المستوى مثل البايثون لن نحتاج لهذة العاملات لكن وجودها وفهمها يعطينا افاقاً اوسع.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://pythonarabic.github.io/blog/tag/bythwn-101.html">بايثون 101</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy; 2021 Essa Alshammari</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " بايثون - Python Language ",
+  "url" : "https://pythonarabic.github.io/blog",
+  "image": "https://avatars.githubusercontent.com/u/83315320?v=4",
+  "description": ""
+}
+</script>
+
+
+</body>
+</html>
