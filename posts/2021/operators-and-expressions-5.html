@@ -38,17 +38,25 @@
   </script>
 
 
-    <meta name="author" content="Essa Alshammari" />
-    <meta name="description" content="" />
+<meta name="author" content="Essa Alshammari" />
+<meta name="description" content="عمليات مطابقة الهوية" />
+<meta name="keywords" content="بايثون 101">
+
+
 <meta property="og:site_name" content="بايثون - Python Language"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="بايثون - Python Language"/>
-<meta property="og:description" content=""/>
+<meta property="og:title" content="العوامل وتعابيرها 5"/>
+<meta property="og:description" content="عمليات مطابقة الهوية"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://pythonarabic.github.io/blog"/>
+<meta property="og:url" content="https://pythonarabic.github.io/blog/posts/2021/operators-and-expressions-5.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-06-04 17:53:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://pythonarabic.github.io/blog/author/essa-alshammari.html">
+<meta property="article:section" content="سلسلة مبادئ البايثون"/>
+<meta property="article:tag" content="بايثون 101"/>
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/83315320?v=4">
 
-  <title>بايثون - Python Language &ndash; الاقسام</title>
+  <title>بايثون - Python Language &ndash; العوامل وتعابيرها 5</title>
 
 </head>
 <body class="light-theme">
@@ -104,21 +112,47 @@
 
 <article class="single">
   <header>
-    <h1 id="categories">الاقسام</h1>
+      
+    <h1 id="operators-and-expressions-5">العوامل وتعابيرها 5</h1>
+    <p>
+       نشر في يوم Fri 04 June 2021 في قسم \ اقسام <a href="https://pythonarabic.github.io/blog/category/slsl-mbdy-lbythwn.html">سلسلة مبادئ البايثون</a>
+
+    </p>
   </header>
+
+
   <div>
-    <ul class="list">
-      <li>
-        <a href="https://pythonarabic.github.io/blog/category/mktbt-bythwn.html">مكتبات بايثون</a> (1)
-      </li>
-      <li>
-        <a href="https://pythonarabic.github.io/blog/category/python.html">Python</a> (1)
-      </li>
-      <li>
-        <a href="https://pythonarabic.github.io/blog/category/slsl-mbdy-lbythwn.html">سلسلة مبادئ البايثون</a> (13)
-      </li>
-    </ul>
+    <h1>عمليات مطابقة الهوية</h1>
+<p>البايثون لديها عاملان للتأكد من الهوية, <code>is</code> و <code>is not</code>. وعندما نقول الهوية فهذين العاملين يتأكدان من المعاملين المحيطات بهما ما اذا كانوا ينتمون لنفس الكائن object  وهذا لا يعني التساوي في القيم.</p>
+<ul>
+<li><code>is</code> يقوم بأرجاع <code>True</code> اذا كان كلا المعاملين يشيران الى نفس الكائن.</li>
+<li><code>is not</code> يقوم بالعكس تماماً</li>
+</ul>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="ow">is</span> <span class="n">y</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="mi">139659877723280</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="mi">139659877723216</span>
+</code></pre></div>
+
+<p>كما رأيتم قيم كلا المتغيرين متساوية لكنها لا تشير ولا تنتمي لنفس الكائن وتأكدنا من ذلك بأستخدام فنكشن <code>id</code> التي تعرفتم عليها سابقاً. الان بأمكاننا التاكد بأستخدام هذه العاملات بدلا من <code>id</code>.</p>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://pythonarabic.github.io/blog/tag/bythwn-101.html">بايثون 101</a>
+    </p>
+  </div>
+
+
+
+
+
 </article>
 
     <footer>
