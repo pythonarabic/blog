@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://pythonarabic.github.io/blog/theme/pygments/tango.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://pythonarabic.github.io/blog/theme/font-awesome/css/solid.css">
+
+
+
+
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/83315320?v=4" type="image/x-icon">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/83315320?v=4" type="image/x-icon">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W64WTXBCXN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W64WTXBCXN');
+  </script>
+
+
+<meta name="author" content="Essa Alshammari" />
+<meta name="description" content="العوامل والوظائف المستخدمة في معالجة النصوص" />
+<meta name="keywords" content="بايثون 101">
+
+
+<meta property="og:site_name" content="بايثون - Python Language"/>
+<meta property="og:title" content="السلاسل النصية في بايثون 1"/>
+<meta property="og:description" content="العوامل والوظائف المستخدمة في معالجة النصوص"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://pythonarabic.github.io/blog/posts/2021/strings-1.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-06-05 12:57:00+03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://pythonarabic.github.io/blog/author/essa-alshammari.html">
+<meta property="article:section" content="سلسلة مبادئ البايثون"/>
+<meta property="article:tag" content="بايثون 101"/>
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/83315320?v=4">
+
+  <title>بايثون - Python Language &ndash; السلاسل النصية في بايثون 1</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://pythonarabic.github.io/blog">
+        <img src="https://avatars.githubusercontent.com/u/83315320?v=4" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="https://pythonarabic.github.io/blog"></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog" >الرئيسية</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/categories.html" >الاقسام</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/tags.html" >الوسوم</a>
+            </li>
+            <li>
+              <a target="_self" href="https://pythonarabic.github.io/blog/authors.html" >الكُتاب</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/pythonarabic" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-telegram" href="https://t.me/arabipython" target="_blank">
+              <i class="fab fa-telegram"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main dir="rtl">
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="strings-1">السلاسل النصية في بايثون 1</h1>
+    <p>
+       نشر في يوم Sat 05 June 2021 في قسم \ اقسام <a href="https://pythonarabic.github.io/blog/category/slsl-mbdy-lbythwn.html">سلسلة مبادئ البايثون</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>سابقا في احدى مواضيع انواع البيانات تعرفنا على ماهية السلاسل النصية وكيفية انشائها واليوم في هذا الموضوع سنغوص في الاعماق قليلا.</p>
+<p>تقريبا لايوجد اي برنامج في اي لغة برمجية لا يتعامل مع السلاسل النصية ويقوم بمعالجتها بطريقة او بأخرى.</p>
+<p>البايثون يقدم مجموعة جيدة جداً في معالجة النصوص من عوامل ووظائف, وسوف نتعرف عليها تباعاً</p>
+<p>قبل ذلك يجب ان نذكر ان تقريبا كل شي في البايثون عبارة عن كائن, والكائن يحمل بطياته العديد من الوظائف المدمجة مسبقا والتي تمكننا من استخدامها على هذه الكائنات.</p>
+<p>والسلسلة النصية <code>string</code> في البايثون هو عبارة عن كائن.</p>
+<p>لذلك عندما نقول ميثود فأننا نعني انها وضيفة مدمجة في هذا النوع من البيانات اي الكائن ومكتوبة داخل <code>class</code>. ويمكننا استخدامها من خلال عملية النقطة <code>.</code></p>
+<p>كالتالي:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;I love python&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="s1">&#39;I LOVE PYTHON&#39;</span>
+</code></pre></div>
+
+<blockquote>
+<p>هنا يقوم الميثود <code>upper</code> بتغيير حالة الاحرف كلها الى كبيرة</p>
+</blockquote>
+<p>وعندما نقول فنكشن  فأننا نعني انها وضيفة لكنها مستقلة وغير مكتوبة داخل اي كلاس وتقبل بعض انواع البيانات وتقوم بمعالجتها وارجاع المطلوب منها</p>
+<p>كالتالي:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;I love python&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="mi">13</span>
+</code></pre></div>
+
+<blockquote>
+<p>هنا تقوم الفنكشن <code>len</code> بارجاع عدد الاحرف التي تكون في السلسة النصية مع المسافات</p>
+</blockquote>
+<p>لنبدأ</p>
+<h2>عوامل السلاسل النصية</h2>
+<p>مسبقا قد تعرفتم على عاملين <code>+</code> و <code>*</code> وكنا قد استخدمناها مع الاعداد, لكنها ايضا يمكن استخدامها مع السلاسل النصية كما سنوضح تباعاً.</p>
+<h3>العامل +</h3>
+<p>يقوم هذا العامل عند استخدامه مع السلاسل النصية بجمع او توصيل سلسلتين نصيتين مع بعضها البعض.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;Hello, &quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;World!&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s1</span> <span class="o">+</span> <span class="n">s2</span>
+<span class="s1">&#39;Hello, World!</span>
+</code></pre></div>
+
+<h3>العامل *</h3>
+<p>يقوم هذا العامل بتكرار او نسخ النص بعدد معين.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;I love python! &quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="s1">&#39;I love python! I love python! I love python! &#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">s</span>
+<span class="s1">&#39;I love python! I love python! I love python! &#39;</span>
+</code></pre></div>
+
+<blockquote>
+<p>لا يهم اذا كان النص على يمين او يسار العامل</p>
+</blockquote>
+<h3>العامل in</h3>
+<p>يقوم هذا العامل بتأكيد ما اذا كان هناك نص موجود داخل نص اخر ومن ثم يرجع <code>True</code>او <code>False</code>.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;I love python&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;python&quot;</span> <span class="ow">in</span> <span class="n">s</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;38&quot;</span> <span class="ow">in</span> <span class="s2">&quot;contact at pythonar38@gmail.com&quot;</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Essa&quot;</span> <span class="ow">in</span> <span class="n">s</span>
+<span class="kc">False</span>
+</code></pre></div>
+
+<p>ايضا هناك عامل اخر <code>not in</code> والذي يقوم بالعكس تماماً</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Essa&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s2">&quot;I love python&quot;</span>
+<span class="kc">True</span>
+</code></pre></div>
+
+<h2>وظائف لمعالجة النصوص "فنكشن"</h2>
+<p>مثل ما ذكرنا مسبقا الفنكشن مكتوبة مسبقا وهي مستقلة ولا تتبع لاي كائن ومتاحة في المفسر تلقائياً.</p>
+<h3>الفنكشن <code>ord</code></h3>
+<p>تقوم هذه الفنكشن بتحويل الحرف الى رقم.</p>
+<p>كما تعرفون وفي ادنى مستوى الحاسوب يقوم بتخزين كل شي على هيئة رقم, حتى الاحرف يتم تمثيلها بأرقام.</p>
+<p>وهناك خرائط توضح ارقام الاحرف وابسطها ASCII والتي تحوي على الاحرف اللاتينية.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)</span>
+<span class="mi">112</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">)</span>
+<span class="mi">51</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;!&quot;</span><span class="p">)</span>
+<span class="mi">33</span>
+</code></pre></div>
+
+<p>لكن ماذا عن اللغات الاخرى التي لا تستخدم الرسم اللاتيني؟</p>
+<p>هناك ترميز اخر ويسمى <code>unicode</code> والذي يحاول ان يوفر تمثيل عددي لجميع الاحرف والرموز وكل ما يرسم كتابياً في جميع لغات العالم حتى التعابير الايموجي.</p>
+<p>بايثون في اصدارها الثالث قدمت دعما جيداً لهذا الترميز لذلك لن نواجة مشاكل في ذلك.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;أ&quot;</span><span class="p">)</span>
+<span class="mi">1571</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;ب&quot;</span><span class="p">)</span>
+<span class="mi">1576</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;ج&quot;</span><span class="p">)</span>
+<span class="mi">1580</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;د&quot;</span><span class="p">)</span>
+<span class="mi">1583</span>
+</code></pre></div>
+
+<h3>الفنكشن <code>chr</code></h3>
+<p>تقوم هذه الفنكشن بعكس ما تقوم به <code>ord</code> تماماً, بحيث نعطيها الرقم وتقوم بأرجاع الحرف.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">1571</span><span class="p">)</span>
+<span class="s1">&#39;أ&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">112</span><span class="p">)</span>
+<span class="s1">&#39;p&#39;</span>
+</code></pre></div>
+
+<h3>الفنكشن <code>len</code></h3>
+<p>تقوم هذه الفنكشن بأرجاع عدد الاحرف الموجودة داخل النص.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;I love python&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="mi">13</span>
+</code></pre></div>
+
+<h3>الفنكشن <code>str</code></h3>
+<p>تقوم هذه الفنكشن بتحويل او ارجاع التمثيل النصي لأي كائن في البايثون.</p>
+<p>مثال:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="s1">&#39;True&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span><span class="mi">38</span><span class="p">)</span>
+<span class="s1">&#39;38&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">str</span><span class="p">(</span><span class="s2">&quot;Essa&quot;</span><span class="p">)</span>
+<span class="s1">&#39;Essa&#39;</span>
+</code></pre></div>
+
+<h1></h1>
+<p>سنتوقف عند هذا الحد وفي المواضيع التالية سنكمل.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://pythonarabic.github.io/blog/tag/bythwn-101.html">بايثون 101</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy; 2021 Essa Alshammari</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " بايثون - Python Language ",
+  "url" : "https://pythonarabic.github.io/blog",
+  "image": "https://avatars.githubusercontent.com/u/83315320?v=4",
+  "description": ""
+}
+</script>
+
+
+</body>
+</html>
